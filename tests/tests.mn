@@ -1,0 +1,40 @@
+#client pinging all router interfaces
+client ping 10.0.1.1 -c 5
+client ping 192.168.2.1 -c 5
+client ping 172.64.3.1 -c 5
+#server1 pinging all router interfaces
+server1 ping 10.0.1.1 -c 5
+server1 ping 192.168.2.1 -c 5
+server1 ping 172.64.3.1 -c 5
+#server2 pinging all router interfaces
+server2 ping 10.0.1.1 -c 5
+server2 ping 192.168.2.1 -c 5
+server2 ping 172.64.3.1 -c 5
+
+#client pings each other server
+client ping 192.168.2.2 -c 5
+client ping 172.64.3.10 -c 5
+#server1 pings each other server
+server1 ping 10.0.1.1 -c 5
+server1 ping 172.64.3.10 -c 5
+#server2 pings each other server
+server2 ping 10.0.1.1 -c 5
+server2 ping 192.168.2.2 -c 5
+
+#pings to unreachable should return net unreachable
+client ping 8.8.8.8 -c 3
+server1 ping 8.8.8.8 -c 3
+server2 ping 8.8.8.8 -c 3
+
+#test to make sure that the router returns connection refused when trying to transfer data to it
+client echo "hello" | nc -v 10.0.1.1 8888
+client echo "hello" | nc -v 192.168.2.1 8888
+client echo "hello" | nc -v 172.64.3.10 8888
+
+server1 echo "hello" | nc -v 10.0.1.1 8888
+server1 echo "hello" | nc -v 192.168.2.1 8888
+server1 echo "hello" | nc -v 172.64.3.10 8888
+
+server2 echo "hello" | nc -v 10.0.1.1 8888
+server2 echo "hello" | nc -v 192.168.2.1 8888
+server2 echo "hello" | nc -v 172.64.3.10 8888

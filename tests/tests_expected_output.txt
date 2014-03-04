@@ -1,0 +1,226 @@
+Running tests...
+*** Shutting down stale SimpleHTTPServers  
+*** Shutting down stale webservers  
+*** Successfully loaded ip settings for hosts
+ {'server1': '192.168.2.2', 'sw0-eth3': '10.0.1.1', 'sw0-eth1': '192.168.2.1', 'sw0-eth2': '172.64.3.1', 'client': '10.0.1.100', 'server2': '172.64.3.10'}
+*** Creating network
+*** Creating network
+*** Adding controller
+*** Adding hosts:
+client server1 server2 
+*** Adding switches:
+sw0 
+*** Adding links:
+(client, sw0) (server1, sw0) (server2, sw0) 
+*** Configuring hosts
+client server1 server2 
+*** Starting controller
+*** Starting 1 switches
+sw0 
+*** setting default gateway of host server1
+*** setting default gateway of host server2
+*** setting default gateway of host client
+*** Starting SimpleHTTPServer on host server1 
+*** Starting SimpleHTTPServer on host server2 
+*** Starting CLI:
+*** Unknown command: #client pinging all router interfaces
+PING 10.0.1.1 (10.0.1.1) 56(84) bytes of data.
+64 bytes from 10.0.1.1: icmp_req=1 ttl=100 time=179 ms
+64 bytes from 10.0.1.1: icmp_req=2 ttl=100 time=50.8 ms
+64 bytes from 10.0.1.1: icmp_req=3 ttl=100 time=32.6 ms
+64 bytes from 10.0.1.1: icmp_req=4 ttl=100 time=13.3 ms
+64 bytes from 10.0.1.1: icmp_req=5 ttl=100 time=30.0 ms
+
+--- 10.0.1.1 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4004ms
+rtt min/avg/max/mdev = 13.361/61.289/179.528/60.304 ms
+PING 192.168.2.1 (192.168.2.1) 56(84) bytes of data.
+64 bytes from 192.168.2.1: icmp_req=1 ttl=100 time=46.1 ms
+64 bytes from 192.168.2.1: icmp_req=2 ttl=100 time=40.6 ms
+64 bytes from 192.168.2.1: icmp_req=3 ttl=100 time=35.9 ms
+64 bytes from 192.168.2.1: icmp_req=4 ttl=100 time=17.5 ms
+64 bytes from 192.168.2.1: icmp_req=5 ttl=100 time=33.8 ms
+
+--- 192.168.2.1 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4005ms
+rtt min/avg/max/mdev = 17.506/34.816/46.142/9.638 ms
+PING 172.64.3.1 (172.64.3.1) 56(84) bytes of data.
+64 bytes from 172.64.3.1: icmp_req=1 ttl=100 time=43.4 ms
+64 bytes from 172.64.3.1: icmp_req=2 ttl=100 time=52.5 ms
+64 bytes from 172.64.3.1: icmp_req=3 ttl=100 time=33.4 ms
+64 bytes from 172.64.3.1: icmp_req=4 ttl=100 time=50.2 ms
+64 bytes from 172.64.3.1: icmp_req=5 ttl=100 time=16.7 ms
+
+--- 172.64.3.1 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4006ms
+rtt min/avg/max/mdev = 16.772/39.311/52.582/13.076 ms
+*** Unknown command: #server1 pinging all router interfaces
+PING 10.0.1.1 (10.0.1.1) 56(84) bytes of data.
+64 bytes from 10.0.1.1: icmp_req=1 ttl=100 time=121 ms
+64 bytes from 10.0.1.1: icmp_req=2 ttl=100 time=52.4 ms
+64 bytes from 10.0.1.1: icmp_req=3 ttl=100 time=18.7 ms
+64 bytes from 10.0.1.1: icmp_req=4 ttl=100 time=34.1 ms
+64 bytes from 10.0.1.1: icmp_req=5 ttl=100 time=136 ms
+
+--- 10.0.1.1 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4005ms
+rtt min/avg/max/mdev = 18.779/72.838/136.863/47.646 ms
+PING 192.168.2.1 (192.168.2.1) 56(84) bytes of data.
+64 bytes from 192.168.2.1: icmp_req=1 ttl=100 time=121 ms
+64 bytes from 192.168.2.1: icmp_req=2 ttl=100 time=122 ms
+64 bytes from 192.168.2.1: icmp_req=3 ttl=100 time=122 ms
+64 bytes from 192.168.2.1: icmp_req=4 ttl=100 time=122 ms
+64 bytes from 192.168.2.1: icmp_req=5 ttl=100 time=122 ms
+
+--- 192.168.2.1 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4320ms
+rtt min/avg/max/mdev = 121.082/122.317/122.719/0.622 ms
+PING 172.64.3.1 (172.64.3.1) 56(84) bytes of data.
+64 bytes from 172.64.3.1: icmp_req=1 ttl=100 time=123 ms
+64 bytes from 172.64.3.1: icmp_req=2 ttl=100 time=123 ms
+64 bytes from 172.64.3.1: icmp_req=3 ttl=100 time=122 ms
+64 bytes from 172.64.3.1: icmp_req=4 ttl=100 time=122 ms
+64 bytes from 172.64.3.1: icmp_req=5 ttl=100 time=122 ms
+
+--- 172.64.3.1 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4308ms
+rtt min/avg/max/mdev = 122.397/123.010/123.990/0.727 ms
+*** Unknown command: #server2 pinging all router interfaces
+PING 10.0.1.1 (10.0.1.1) 56(84) bytes of data.
+64 bytes from 10.0.1.1: icmp_req=1 ttl=100 time=478 ms
+64 bytes from 10.0.1.1: icmp_req=2 ttl=100 time=124 ms
+64 bytes from 10.0.1.1: icmp_req=3 ttl=100 time=122 ms
+64 bytes from 10.0.1.1: icmp_req=4 ttl=100 time=122 ms
+64 bytes from 10.0.1.1: icmp_req=5 ttl=100 time=122 ms
+
+--- 10.0.1.1 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4319ms
+rtt min/avg/max/mdev = 122.265/194.017/478.572/142.279 ms
+PING 192.168.2.1 (192.168.2.1) 56(84) bytes of data.
+64 bytes from 192.168.2.1: icmp_req=1 ttl=100 time=125 ms
+64 bytes from 192.168.2.1: icmp_req=2 ttl=100 time=122 ms
+64 bytes from 192.168.2.1: icmp_req=3 ttl=100 time=122 ms
+64 bytes from 192.168.2.1: icmp_req=4 ttl=100 time=122 ms
+64 bytes from 192.168.2.1: icmp_req=5 ttl=100 time=122 ms
+
+--- 192.168.2.1 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4320ms
+rtt min/avg/max/mdev = 122.135/122.944/125.811/1.436 ms
+PING 172.64.3.1 (172.64.3.1) 56(84) bytes of data.
+64 bytes from 172.64.3.1: icmp_req=1 ttl=100 time=121 ms
+64 bytes from 172.64.3.1: icmp_req=2 ttl=100 time=122 ms
+64 bytes from 172.64.3.1: icmp_req=3 ttl=100 time=122 ms
+64 bytes from 172.64.3.1: icmp_req=4 ttl=100 time=122 ms
+64 bytes from 172.64.3.1: icmp_req=5 ttl=100 time=122 ms
+
+--- 172.64.3.1 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4308ms
+rtt min/avg/max/mdev = 121.542/122.169/122.601/0.525 ms
+*** Unknown command: #client pings each other server
+PING 192.168.2.2 (192.168.2.2) 56(84) bytes of data.
+64 bytes from 192.168.2.2: icmp_req=1 ttl=63 time=719 ms
+64 bytes from 192.168.2.2: icmp_req=2 ttl=63 time=240 ms
+64 bytes from 192.168.2.2: icmp_req=3 ttl=63 time=239 ms
+64 bytes from 192.168.2.2: icmp_req=4 ttl=63 time=239 ms
+64 bytes from 192.168.2.2: icmp_req=5 ttl=63 time=239 ms
+
+--- 192.168.2.2 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4320ms
+rtt min/avg/max/mdev = 239.842/335.909/719.827/191.959 ms
+PING 172.64.3.10 (172.64.3.10) 56(84) bytes of data.
+64 bytes from 172.64.3.10: icmp_req=1 ttl=63 time=479 ms
+64 bytes from 172.64.3.10: icmp_req=2 ttl=63 time=240 ms
+64 bytes from 172.64.3.10: icmp_req=3 ttl=63 time=240 ms
+64 bytes from 172.64.3.10: icmp_req=4 ttl=63 time=240 ms
+64 bytes from 172.64.3.10: icmp_req=5 ttl=63 time=240 ms
+
+--- 172.64.3.10 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4307ms
+rtt min/avg/max/mdev = 240.030/287.967/479.044/95.539 ms
+*** Unknown command: #server1 pings each other server
+PING 10.0.1.1 (10.0.1.1) 56(84) bytes of data.
+64 bytes from 10.0.1.1: icmp_req=1 ttl=100 time=228 ms
+64 bytes from 10.0.1.1: icmp_req=2 ttl=100 time=122 ms
+64 bytes from 10.0.1.1: icmp_req=3 ttl=100 time=122 ms
+64 bytes from 10.0.1.1: icmp_req=4 ttl=100 time=122 ms
+64 bytes from 10.0.1.1: icmp_req=5 ttl=100 time=122 ms
+
+--- 10.0.1.1 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4309ms
+rtt min/avg/max/mdev = 122.096/143.594/228.634/42.520 ms
+PING 172.64.3.10 (172.64.3.10) 56(84) bytes of data.
+64 bytes from 172.64.3.10: icmp_req=1 ttl=63 time=239 ms
+64 bytes from 172.64.3.10: icmp_req=2 ttl=63 time=241 ms
+64 bytes from 172.64.3.10: icmp_req=3 ttl=63 time=362 ms
+64 bytes from 172.64.3.10: icmp_req=4 ttl=63 time=240 ms
+64 bytes from 172.64.3.10: icmp_req=5 ttl=63 time=240 ms
+
+--- 172.64.3.10 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4314ms
+rtt min/avg/max/mdev = 239.214/264.643/362.063/48.714 ms
+*** Unknown command: #server2 pings each other server
+PING 10.0.1.1 (10.0.1.1) 56(84) bytes of data.
+64 bytes from 10.0.1.1: icmp_req=1 ttl=100 time=229 ms
+64 bytes from 10.0.1.1: icmp_req=2 ttl=100 time=122 ms
+64 bytes from 10.0.1.1: icmp_req=3 ttl=100 time=361 ms
+64 bytes from 10.0.1.1: icmp_req=4 ttl=100 time=122 ms
+64 bytes from 10.0.1.1: icmp_req=5 ttl=100 time=124 ms
+
+--- 10.0.1.1 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4309ms
+rtt min/avg/max/mdev = 122.317/191.868/361.145/94.138 ms
+PING 192.168.2.2 (192.168.2.2) 56(84) bytes of data.
+64 bytes from 192.168.2.2: icmp_req=1 ttl=63 time=237 ms
+64 bytes from 192.168.2.2: icmp_req=2 ttl=63 time=240 ms
+64 bytes from 192.168.2.2: icmp_req=3 ttl=63 time=240 ms
+64 bytes from 192.168.2.2: icmp_req=4 ttl=63 time=240 ms
+64 bytes from 192.168.2.2: icmp_req=5 ttl=63 time=240 ms
+
+--- 192.168.2.2 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4307ms
+rtt min/avg/max/mdev = 237.784/239.815/240.421/1.191 ms
+*** Unknown command: #pings to unreachable should return net unreachable
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+From 10.0.1.1 icmp_seq=1 Destination Net Unreachable
+From 10.0.1.1 icmp_seq=2 Destination Net Unreachable
+From 10.0.1.1 icmp_seq=3 Destination Net Unreachable
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2149ms
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+From 192.168.2.1 icmp_seq=1 Destination Net Unreachable
+From 192.168.2.1 icmp_seq=2 Destination Net Unreachable
+From 192.168.2.1 icmp_seq=3 Destination Net Unreachable
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2160ms
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+From 172.64.3.1 icmp_seq=1 Destination Net Unreachable
+From 172.64.3.1 icmp_seq=2 Destination Net Unreachable
+From 172.64.3.1 icmp_seq=3 Destination Net Unreachable
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2150ms
+
+*** Unknown command: #test to make sure that the router returns connection refused when trying to transfer data to it
+nc: connect to 10.0.1.1 port 8888 (tcp) failed: Connection refused
+nc: connect to 192.168.2.1 port 8888 (tcp) failed: Connection refused
+nc: connect to 172.64.3.10 port 8888 (tcp) failed: Connection refused
+nc: connect to 10.0.1.1 port 8888 (tcp) failed: Connection refused
+nc: connect to 192.168.2.1 port 8888 (tcp) failed: Connection refused
+nc: connect to 172.64.3.10 port 8888 (tcp) failed: Connection refused
+nc: connect to 10.0.1.1 port 8888 (tcp) failed: Connection refused
+nc: connect to 192.168.2.1 port 8888 (tcp) failed: Connection refused
+nc: connect to 172.64.3.10 port 8888 (tcp) failed: Connection refused
+
+*** Shutting down stale SimpleHTTPServers  
+*** Shutting down stale webservers  
+*** Stopping 1 switches
+sw0 ...
+*** Stopping 3 hosts
+client server1 server2 
+*** Stopping 1 controllers
+c0 
+*** Done
